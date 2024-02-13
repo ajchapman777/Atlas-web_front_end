@@ -1,3 +1,7 @@
+from bs4 import BeautifulSoup
+
+# Sample HTML content
+html_content = """
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,15 +16,7 @@
     <header></header>
     <main>
       <section>
-        <header>
-          <h2>Headings</h2>
-        </header>
-        <h1>Heading level 1</h1>
-        <h2>Heading level 2</h2>
-        <h3>Heading level 3</h3>
-        <h4>Heading level 4</h4>
-        <h5>Heading level 5</h5>
-        <h6>Heading level 6</h6>
+        <h2>Headings</h2>
       </section>
       <section>
         <h2>About Us</h2>
@@ -57,4 +53,34 @@
     <footer></footer>
   </body>
 </html>
+"""
+
+# Parse HTML content
+soup = BeautifulSoup(html_content, 'html.parser')
+
+# Find the section with the "About Us" heading
+about_section = soup.find('section', string='About Us')
+
+if about_section:
+    # Check if paragraphs are in correct places
+    paragraphs = about_section.find_all('p')
+    correct_paragraphs = [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, omnis expedita! Eum, praesentium cumque accusantium rem, sit quaerat est nisi ratione, deserunt ducimus quidem iste dicta quibusdam atque maxime cum!",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, omnis expedita! Eum, praesentium cumque accusantium rem, sit quaerat est nisi ratione, deserunt ducimus quidem iste dicta quibusdam atque maxime cum!",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, omnis expedita! Eum, praesentium cumque accusantium rem, sit quaerat est nisi ratione, deserunt ducimus quidem iste dicta quibusdam atque maxime cum!"
+    ]
+    paragraphs_correct = [p.text.strip() == correct_paragraphs[i] for i, p in enumerate(paragraphs)]
+
+    # Check if the number of child elements is correct
+    correct_num_children = len(about_section.find_all(recursive=False)) == 4  # including the header
+
+    # Check if paragraphs have correct text
+    paragraphs_correct_text = all(paragraphs_correct)
+
+    # Output results
+    print("correct number of child elements in about section:", correct_num_children)
+    print("paragraphs are in correct places:", correct_num_children and paragraphs_correct_text)
+    print("paragraphs have correct text:", paragraphs_correct_text)
+else:
+    print("this is not the about section!")
 
