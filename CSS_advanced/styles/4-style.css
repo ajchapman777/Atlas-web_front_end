@@ -18,5 +18,6 @@
 /* Revisit the body and anchor declarations */
 body, a {
     color: var(--text-color);
+    font-family: var(--font-family-base); /* Set body's font-family to font-family-base */
 }
 
