@@ -12,8 +12,3 @@ html {
     font-size: 62.5%;
 }
 
-/* Set font size for body to font-size-medium */
-body {
-    font-size: var(--font-size-medium);
-}
-
