@@ -1,16 +1,16 @@
-/* Targeting the root element to create custom properties */
+/* Targeting the root element to create custom font-family properties */
 :root {
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Set the boldness of fonts in the body to font-weight-regular */
+/* Setting body's font-family to font-family-base */
 body {
-    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-base);
 }
-
 
 /* Targeting all 6 levels of heading tags to set font-family to font-family-title */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
 }
+
