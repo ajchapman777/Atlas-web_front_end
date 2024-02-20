@@ -10,7 +10,27 @@ body {
 }
 
 /* Targeting all 6 levels of heading tags and set font-family to font-family-title */
-h1, h2, h3, h4, h5, h6 {
+h1 {
+    font-family: var(--font-family-title);
+}
+
+h2 {
+    font-family: var(--font-family-title);
+}
+
+h3 {
+    font-family: var(--font-family-title);
+}
+
+h4 {
+    font-family: var(--font-family-title);
+}
+
+h5 {
+    font-family: var(--font-family-title);
+}
+
+h6 {
     font-family: var(--font-family-title);
 }
 
