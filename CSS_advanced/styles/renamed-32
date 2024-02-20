@@ -6,7 +6,11 @@
 
 /* Transformations on the card work */
 .card-work:hover .card-image {
-  transition: var(--transition-duration) var(--transition-cubic-bezier);
+  transform: scale(1.2);
+}
+
+.card-work:hover .card-outer {
+  transform: scale(0.95);
 }
 
 /* Animations on the navigation items */
