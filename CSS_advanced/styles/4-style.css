@@ -18,6 +18,11 @@
 /* Revisit the body and anchor declarations */
 body, a {
     color: var(--text-color);
-    font-family: var(--font-family-base); /* Set body's font-family to font-family-base */
+    font-family: var(--font-family-base);
+}
+
+/* Set font-family for all heading levels */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title); /* Set all headings font-family to font-family-title */
 }
 
