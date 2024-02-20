@@ -1,0 +1,21 @@
+/* styles/25-style.css */
+
+/* Card testimonial selector */
+.card-testimonial {
+    text-align: center;
+}
+
+/* Card avatar inside the card testimonial */
+.card-testimonial .card-avatar {
+    border-radius: 50%;
+    width: 10rem; /* Assuming 1 root element is 1rem */
+    height: 10rem; /* Assuming 1 root element is 1rem */
+}
+
+/* Cite tag inside card quote inside card testimonial */
+.card-testimonial .card-quote cite {
+    display: block;
+    padding-top: 1rem; /* Assuming 1 root element is 1rem */
+    color: var(--color-primary);
+}
+
