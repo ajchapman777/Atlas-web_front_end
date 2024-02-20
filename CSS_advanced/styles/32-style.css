@@ -20,8 +20,9 @@
 
 /* Animation on button background */
 .button:hover {
-  transition: background-color var(--transition-duration) var(--transition-cubic-bezier),
-              color var(--transition-duration) var(--transition-cubic-bezier);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-cubic-bezier);
+  transition-property: background-color, color;
 }
 
 /* Transitions on the card works */
