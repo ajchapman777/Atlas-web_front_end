@@ -1,16 +1,17 @@
-/* Targeting the root element to create custom font-family properties */
+/* Target the root element and define custom properties for font sizes */
 :root {
-    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    /* Set font size for the html element to 62.5% of its normal size */
+    font-size: 62.5%;
 }
 
-/* Setting body's font-family to font-family-base */
+/* Set font size for body to font-size-medium */
 body {
-    font-family: var(--font-family-base);
-}
-
-/* Targeting all 6 levels of heading tags to set font-family to font-family-title */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-title);
+    font-size: var(--font-size-medium);
 }
 
