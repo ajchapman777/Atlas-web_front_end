@@ -9,6 +9,6 @@
 
 /* Set font size for the html element to 62.5% of its normal size */
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
 }
 
