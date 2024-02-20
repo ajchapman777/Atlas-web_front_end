@@ -1,13 +1,23 @@
-:root {
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
+/* Target anchor elements containing hyperlinks */
+a[href] {
+    /* Your styles here */
 }
 
-.section-title {
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
+/* Target visited state for the link */
+a[href]:visited {
+    /* Italicize the text */
+    font-style: italic;
+}
+
+/* Target hover state for the link */
+a[href]:hover {
+    /* Decorate the links with an underline when hovering */
+    text-decoration: underline;
+}
+
+/* Target active state for the link */
+a[href]:active {
+    /* Set the color of the background with the variable color-light-grey */
+    background-color: var(--color-light-grey);
 }
 
